@@ -1,0 +1,229 @@
+:root {
+  --blue: #0d47a1;
+  --orange: #ff8f00;
+  --dark: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background: var(--blue);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 40px;
+}
+
+.info-masjid h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.info-masjid p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.header-right {
+  text-align: right;
+}
+
+#clock {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--orange);
+  line-height: 1;
+}
+
+#date {
+  font-size: 14px;
+}
+
+/* Hero dan background */
+.hero {
+  position: relative;
+  height: 55vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* transition hero */
+.hero {
+  transition: background-image 1.5s ease-in-out;
+}
+
+/* overlay biar teks kebaca */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* COUNTDOWN RAMADHAN  */
+.ramadhan {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* COUNTDOWN SHOLAT */
+.next-sholat {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  z-index: 2;
+  background: var(--orange);
+  color: black;
+  padding: 10px 14px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+#nextPrayer {
+  font-size: 14px;
+}
+
+#nextCountdown {
+  font-size: 18px;
+}
+
+/* JADWAL SHOLAT  */
+.jadwal {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  padding: 16px 20px;
+  background: #0b0b0b;
+}
+
+.jadwal-item {
+  background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.jadwal-item .label {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.jadwal-item .time {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff8f00;
+  letter-spacing: 2px;
+}
+
+/* Higlight solat yang aktif */
+.jadwal-item.active {
+  background: linear-gradient(180deg, #ff8f00, #d97706);
+  color: black;
+}
+
+.jadwal-item.active .time {
+  color: black;
+}
+
+/*MARQUEE */
+.marquee {
+  background: #111;
+  color: white;
+  padding: 10px 0;
+  font-size: 14px;
+  border-top: 2px solid var(--orange);
+}
+
+/* Header / navbar atas */
+.top-bar {
+  margin: 20px;
+  padding: 18px 26px;
+  background: linear-gradient(180deg, #2b2b2b, #1a1a1a);
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9);
+}
+
+/* LEFT */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mosque-icon {
+  font-size: 34px;
+  color: white;
+}
+
+.masjid-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.masjid-address {
+  font-size: 12px;
+  color: #cfcfcf;
+  margin-top: 2px;
+}
+
+/* RIGHT */
+.clock-box {
+  background: #111;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#clock {
+  font-size: 34px;
+  font-weight: bold;
+  color: #ff8f00;
+  letter-spacing: 2px;
+}
+
+#date {
+  font-size: 12px;
+  color: #ddd;
+  margin-top: 6px;
+  line-height: 1.3;
+}
